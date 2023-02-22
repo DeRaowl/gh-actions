@@ -11,5 +11,5 @@ jobs:
                       uses: pozil/auto-assign-issue@v1.0.3
                       with:
                           repo-token: ${{ secrets.GITHUB_TOKEN }}
-                          assignees: deraowl
+                          assignees: DeRaowl
             
