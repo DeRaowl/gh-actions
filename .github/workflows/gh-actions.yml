@@ -1,15 +1,16 @@
-name: My Issues tracker
+name: GH Actions
+
 on:
-  issues:
-        type: [opened]
-        
+    issues:
+        types: [opened]
+
 jobs:
     auto-assign:
-                runs-on: ubuntu-latest
-                steps:
-                    - name: 'Auto-assign issue'
-                      uses: pozil/auto-assign-issue@v1.0.3
-                      with:
-                          repo-token: ${{ secrets.GITHUB_TOKEN }}
-                          assignees: DeRaowl
-            
+        runs-on: ubuntu-latest
+        steps:
+            - name: 'Auto-assign PR'
+              uses: pozil/auto-assign-issue@v1
+              with:
+                  assignees: octocat,cat,dog
+                  numOfAssignee: 2
+                  allowSelfAssign: false
