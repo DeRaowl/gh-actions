@@ -11,6 +11,5 @@ jobs:
             - name: 'Auto-assign PR'
               uses: pozil/auto-assign-issue@v1
               with:
-                  assignees: octocat,cat,dog
-                  numOfAssignee: 2
-                  allowSelfAssign: false
+                  assignees: deraowl
+                  repo-token: ${{ secrets.GITHUB_TOKEN }}
